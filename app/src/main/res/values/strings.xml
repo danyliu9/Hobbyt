@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Hobbyt</string>
-    
+    <string name="weather_api_key">4e12f2f97042f81f22b128e2ca1324ed</string>
 </resources>
