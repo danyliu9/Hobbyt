@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "719530693592",
+    "firebase_url": "https://hobbyt-1548547730362.firebaseio.com",
+    "project_id": "hobbyt-1548547730362",
+    "storage_bucket": "hobbyt-1548547730362.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:719530693592:android:33c421beec56e2dc",
+        "android_client_info": {
+          "package_name": "com.example.danielryu.hobbyt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "719530693592-l4tdt6pdtc4q4ho052pdfaig0h41g6s4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEWs19GQxGkoXOELaYKa1OyPNC4sxoJcg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
