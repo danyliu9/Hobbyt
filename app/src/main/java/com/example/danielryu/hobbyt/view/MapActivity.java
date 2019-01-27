@@ -1,8 +1,11 @@
 package com.example.danielryu.hobbyt.view;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -23,6 +26,7 @@ public class MapActivity extends FragmentActivity implements OnMyLocationButtonC
         OnMyLocationClickListener,
         OnMapReadyCallback {
 
+    LocationManager mlocationManager;
     private GoogleMap mMap;
 
     @Override
@@ -55,9 +59,9 @@ public class MapActivity extends FragmentActivity implements OnMyLocationButtonC
 //        }
 
         // Add a marker in Sydney, Australia, and move the camera.
-//        LatLng sydney = new LatLng(-34, 151);
+        LatLng sydney = new LatLng(-34, 151);
 //        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-//        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
 
     private void enableMyLocationIfPermitted() {
@@ -70,6 +74,34 @@ public class MapActivity extends FragmentActivity implements OnMyLocationButtonC
                     12);
         } else if (mMap != null) {
             mMap.setMyLocationEnabled(true);
+            mlocationManager = (LocationManager)
+                    getSystemService(Context.LOCATION_SERVICE);
+            Location curr = getLastBestLocation();
+            LatLng currLatLng = new LatLng(curr.getLatitude(), curr.getLongitude());
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(currLatLng));
+        }
+    }
+    /**
+     * @return the last know best location
+     */
+    private Location getLastBestLocation() {
+        @SuppressLint("MissingPermission") Location locationGPS = mlocationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+        @SuppressLint("MissingPermission") Location locationNet = mlocationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+
+        long GPSLocationTime = 0;
+        if (null != locationGPS) { GPSLocationTime = locationGPS.getTime(); }
+
+        long NetLocationTime = 0;
+
+        if (null != locationNet) {
+            NetLocationTime = locationNet.getTime();
+        }
+
+        if ( 0 < GPSLocationTime - NetLocationTime ) {
+            return locationGPS;
+        }
+        else {
+            return locationNet;
         }
     }
 
@@ -77,7 +109,7 @@ public class MapActivity extends FragmentActivity implements OnMyLocationButtonC
         Toast.makeText(this, "Location permission not granted, " +
                         "showing default location",
                 Toast.LENGTH_SHORT).show();
-        LatLng redmond = new LatLng(47.6739881, -122.121512);
+        LatLng redmond = new LatLng(0, 0);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(redmond));
     }
 
