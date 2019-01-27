@@ -5,7 +5,6 @@ import android.location.Location;
 import android.os.AsyncTask;
 import com.example.danielryu.hobbyt.R;
 import com.example.danielryu.hobbyt.model.Weather;
-import com.example.danielryu.hobbyt.view.View;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -20,13 +19,7 @@ import java.net.URLConnection;
 
 public class WeatherManager extends Manager{
 
-
-
-    private static String API_KEY = Resources.getSystem().getString(R.string.weather_api_key);
-
-    public WeatherManager(View v) {
-        super(v);
-    }
+    private final static String API_KEY = Resources.getSystem().getString(R.string.weather_api_key);
 
     public static void getCurrentWeather(Location location) {
         double lat =  location.getLatitude();
@@ -117,8 +110,8 @@ public class WeatherManager extends Manager{
 
         @Override
         protected JSONObject doInBackground(String... strings) {
-            String urlString = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon = " + lon
-                    + "&APPID = " + API_KEY;
+            String urlString = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon
+                    + "&APPID=" + API_KEY;
             JSONObject obj = null;
             try {
                 URL url = new URL(urlString);
