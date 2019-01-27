@@ -8,7 +8,6 @@ public class ContactInfo {
     private URL webAddress;
     private String phoneNumber;
 
-    // EFFECTS: constructs contact info with given address, geo location, web address and phone number
     public ContactInfo(String address, GeoPoint geoLocation, URL webAddress, String phoneNumber) {
         this.address = address;
         this.geoLocation = geoLocation;
