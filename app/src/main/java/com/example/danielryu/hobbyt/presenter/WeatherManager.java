@@ -20,8 +20,6 @@ import java.net.URLConnection;
 
 public class WeatherManager extends Manager{
 
-
-
     private static String API_KEY = Resources.getSystem().getString(R.string.weather_api_key);
 
     public WeatherManager(View v) {
@@ -117,8 +115,8 @@ public class WeatherManager extends Manager{
 
         @Override
         protected JSONObject doInBackground(String... strings) {
-            String urlString = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon = " + lon
-                    + "&APPID = " + API_KEY;
+            String urlString = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon
+                    + "&APPID=" + API_KEY;
             JSONObject obj = null;
             try {
                 URL url = new URL(urlString);
