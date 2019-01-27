@@ -27,17 +27,17 @@
             android:value="AIzaSyBK5jXd7khxoNaHirWB30cDq1-2kJxJmWM" />
 
         <activity android:name=".view.InterestActivity" />
-        <activity android:name=".view.WelcomeActivity" />
-
-        <uses-library android:name="com.google.android.maps" />
-
-        <activity android:name=".view.MapActivity">
+        <activity android:name=".view.WelcomeActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <uses-library android:name="com.google.android.maps" />
+
+        <activity android:name=".view.MapActivity"/>
+
     </application>
 
 </manifest>

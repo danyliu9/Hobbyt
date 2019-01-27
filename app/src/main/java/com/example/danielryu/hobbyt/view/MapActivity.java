@@ -4,6 +4,7 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
@@ -26,7 +27,6 @@ public class MapActivity extends FragmentActivity implements OnMyLocationButtonC
         OnMyLocationClickListener,
         OnMapReadyCallback {
 
-    LocationManager mlocationManager;
     private GoogleMap mMap;
 
     @Override
@@ -59,9 +59,7 @@ public class MapActivity extends FragmentActivity implements OnMyLocationButtonC
 //        }
 
         // Add a marker in Sydney, Australia, and move the camera.
-        LatLng sydney = new LatLng(-34, 151);
-//        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+
     }
 
     private void enableMyLocationIfPermitted() {
@@ -74,35 +72,20 @@ public class MapActivity extends FragmentActivity implements OnMyLocationButtonC
                     12);
         } else if (mMap != null) {
             mMap.setMyLocationEnabled(true);
-            mlocationManager = (LocationManager)
-                    getSystemService(Context.LOCATION_SERVICE);
-            Location curr = getLastBestLocation();
-            LatLng currLatLng = new LatLng(curr.getLatitude(), curr.getLongitude());
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(currLatLng));
+            centerCamera();
+
         }
     }
-    /**
-     * @return the last know best location
-     */
-    private Location getLastBestLocation() {
-        @SuppressLint("MissingPermission") Location locationGPS = mlocationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-        @SuppressLint("MissingPermission") Location locationNet = mlocationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
 
-        long GPSLocationTime = 0;
-        if (null != locationGPS) { GPSLocationTime = locationGPS.getTime(); }
-
-        long NetLocationTime = 0;
-
-        if (null != locationNet) {
-            NetLocationTime = locationNet.getTime();
-        }
-
-        if ( 0 < GPSLocationTime - NetLocationTime ) {
-            return locationGPS;
-        }
-        else {
-            return locationNet;
-        }
+    private void centerCamera() {
+        LocationManager locationManager = (LocationManager)
+                getSystemService(Context.LOCATION_SERVICE);
+        Criteria criteria = new Criteria();
+        String bestProvider = locationManager.getBestProvider(criteria, false);
+        @SuppressLint("MissingPermission") Location location = locationManager.getLastKnownLocation(bestProvider);
+        LatLng here = new LatLng(location.getLatitude(), location.getLongitude());
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(here));
+        mMap.setMinZoomPreference((float) 10);
     }
 
     private void showDefaultLocation() {
