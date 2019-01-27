@@ -82,6 +82,4 @@ local.properties
 
 build/
 
-gradle/
-
 # End of https://www.gitignore.io/api/intellij+iml
