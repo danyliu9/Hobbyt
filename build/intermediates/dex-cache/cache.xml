@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Dan_Y\Desktop\Hobbyt\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="28.0.3"
+        sha1="d49d478766c7a6902fd97758801449e81364df44">
+        <dex dex="C:\Users\Dan_Y\Desktop\Hobbyt\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_ac1bfe93a6678bb90e8e346438136e2b732ed418\classes.dex" />
+    </item>
+
+</items>
