@@ -4,6 +4,7 @@ import android.content.res.Resources;
 import android.location.Location;
 import android.os.AsyncTask;
 import com.example.danielryu.hobbyt.R;
+import com.example.danielryu.hobbyt.model.Weather;
 import com.example.danielryu.hobbyt.view.View;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -40,8 +41,33 @@ public class WeatherManager extends Manager{
     }
 
     private static void parse(JSONObject o) {
+        // Refer to https://openweathermap.org/weather-conditions to make sense of these codes.
         try {
-            JSONArray weatherData = o.getJSONArray("weather");
+            JSONArray weatherArray = o.getJSONArray("weather");
+            JSONObject weatherData = weatherArray.getJSONObject(0);
+
+            String weatherType = weatherData.getString("id");
+
+            char weatherCode = weatherType.charAt(0);
+
+            if (weatherCode == '3' || weatherCode == '5')
+                v.receiveData(Weather.RAINY);
+            else if (weatherCode == '6')
+                v.receiveData(Weather.SNOWING);
+            else if (weatherCode == '8') {
+                if (weatherType.equals("800") || weatherType.equals("801"))
+                    v.receiveData(Weather.SUNNY);
+                else
+                    v.receiveData(Weather.CLOUDY);
+            }
+            else if (weatherCode == '2')
+                v.receiveData(Weather.EXTREME);
+            else {
+                if (weatherType.equals("701") || weatherType.equals("741"))
+                    v.receiveData(Weather.CLOUDY);
+                else
+                    v.receiveData(Weather.EXTREME);
+            }
 
         } catch (JSONException e) {
             e.printStackTrace();
