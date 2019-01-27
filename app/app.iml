@@ -79,56 +79,74 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/blame" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-safeguard" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
+      <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 28 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" scope="TEST" name="Gradle: exposed-instrumentation-api-publish-0.5" level="project" />
     <orderEntry type="library" exported="" name="Gradle: drawerlayout-28.0.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: swiperefreshlayout-28.0.0" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Gradle: espresso-idling-resource-2.2.2" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: jsr305-2.0.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: print-28.0.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: viewpager-28.0.0" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: appcompat-v7-28.0.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: runtime-1.1.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: 1_Gradle: runtime-1.1.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: asynclayoutinflater-28.0.0" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Gradle: espresso-core-2.2.2" level="project" />
     <orderEntry type="library" exported="" name="Gradle: interpolator-28.0.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: support-core-utils-28.0.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: firebase-analytics-impl-16.1.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: rules-0.5" level="project" />
     <orderEntry type="library" exported="" name="Gradle: slidingpanelayout-28.0.0" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: customview-28.0.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: support-media-compat-26.1.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: firebase-core-16.0.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: support-annotations-28.0.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: loader-28.0.0" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: documentfile-28.0.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: hamcrest-core-1.3" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: hamcrest-integration-1.3" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: livedata-core-1.1.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: javax.inject-1" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: versionedparcelable-28.0.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: cursoradapter-28.0.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: javawriter-2.1.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: viewmodel-1.1.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: firebase-measurement-connector-impl-16.0.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: animated-vector-drawable-28.0.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: hamcrest-library-1.3" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: firebase-measurement-connector-16.0.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: play-services-stats-15.0.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: play-services-measurement-base-16.0.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: coordinatorlayout-28.0.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: support-core-ui-28.0.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: support-compat-28.0.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: firebase-common-16.0.0" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: junit-4.12" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: firebase-analytics-16.0.1" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: javax.annotation-api-1.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: localbroadcastmanager-28.0.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: play-services-ads-identifier-15.0.1" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: exposed-instrumentation-api-publish-0.5" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: espresso-idling-resource-2.2.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: firebase-iid-interop-16.0.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: appcompat-v7-28.0.0" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="Gradle: espresso-core-2.2.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: firebase-iid-16.0.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: customview-28.0.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: documentfile-28.0.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: play-services-base-15.0.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: livedata-core-1.1.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: versionedparcelable-28.0.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: support-v4-26.1.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: play-services-tasks-15.0.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: common-1.1.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: 1_Gradle: common-1.1.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: support-fragment-28.0.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: runner-0.5" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: coordinatorlayout-28.0.0" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: support-core-ui-28.0.0" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: support-compat-28.0.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: livedata-1.1.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: collections-28.0.0" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Gradle: junit-4.12" level="project" />
     <orderEntry type="library" exported="" name="Gradle: support-vector-drawable-28.0.0" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="Gradle: javax.annotation-api-1.2" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: localbroadcastmanager-28.0.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: play-services-basement-15.0.1" level="project" />
   </component>
 </module>
