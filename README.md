@@ -1,2 +1,2 @@
 # Hobbyt
-An Android app that generates miscellaneous things to do in Vancouver depending on the weather.
+An Android app that generates things to do nearby based on your interests and the weather.
